@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:oak_log"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " BB",
+    " SB",
+    "S  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "adventurecraft:wood_woodcutting_axe"
+  }
+}
