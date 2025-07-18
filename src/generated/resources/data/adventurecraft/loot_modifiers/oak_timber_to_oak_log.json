@@ -1,0 +1,11 @@
+{
+  "type": "adventurecraft:add_oak_item",
+  "conditions": [
+    {
+      "block": "minecraft:oak_log",
+      "condition": "minecraft:block_state_property"
+    }
+  ],
+  "item": "adventurecraft:oak_timber",
+  "toReplace": "minecraft:oak_log"
+}

@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "equipment",
   "key": {
     "B": {
-      "item": "minecraft:oak_log"
+      "item": "adventurecraft:oak_timber"
     },
     "S": {
       "item": "minecraft:stick"
@@ -12,7 +12,7 @@
   "pattern": [
     " BB",
     " SB",
-    "S  "
+    " S "
   ],
   "result": {
     "count": 1,

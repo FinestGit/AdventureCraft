@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_oak_timber": {
+      "conditions": {
+        "items": [
+          {
+            "items": "adventurecraft:oak_timber"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "adventurecraft:flexible_wood_woodcutting_axe_pattern_3"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_oak_timber"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "adventurecraft:flexible_wood_woodcutting_axe_pattern_3"
+    ]
+  }
+}

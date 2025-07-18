@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_oak_logs": {
+    "has_oak_timber": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:oak_log"
+            "items": "adventurecraft:oak_timber"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "adventurecraft:wood_woodcutting_axe"
+        "recipe": "adventurecraft:flexible_wood_woodcutting_axe_pattern_1"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_oak_logs"
+      "has_oak_timber"
     ]
   ],
   "rewards": {
     "recipes": [
-      "adventurecraft:wood_woodcutting_axe"
+      "adventurecraft:flexible_wood_woodcutting_axe_pattern_1"
     ]
   }
 }

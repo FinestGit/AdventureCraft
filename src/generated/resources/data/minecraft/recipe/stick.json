@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "adventurecraft:oak_timber"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "minecraft:stick"
+  }
+}

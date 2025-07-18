@@ -1,3 +1,6 @@
 {
-  "item.adventurecraft.wood_woodcutting_axe": "Wood Woodcutting Axe"
+  "item.adventurecraft.oak_timber": "Oak Timber",
+  "item.adventurecraft.wood_woodcutting_axe": "Wood Woodcutting Axe",
+  "creativetab.adventurecraft.adventurecraft_items": "AdventureCraft Items",
+  "creativetab.adventurecraft.adventurecraft_tools": "AdventureCraft Tools"
 }

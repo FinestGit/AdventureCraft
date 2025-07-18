@@ -15,5 +15,6 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         basicItem(ModItems.WOOD_WOODCUTTING_AXE.get());
+        basicItem(ModItems.OAK_TIMBER.get());
     }
 }

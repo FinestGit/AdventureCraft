@@ -29,7 +29,7 @@ public class ItemSpawnEvent {
             ItemStack stack = itemEntity.getItem();
 
             if (stack.getItem() instanceof WoodcuttingAxeItem) {
-                ((WoodcuttingAxeItem) stack.getItem()).assignStats();
+                ((WoodcuttingAxeItem) stack.getItem()).assignStats(stack);
             }
         }
     }
