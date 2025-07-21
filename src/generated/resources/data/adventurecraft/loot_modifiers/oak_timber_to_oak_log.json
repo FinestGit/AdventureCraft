@@ -7,5 +7,6 @@
     }
   ],
   "item": "adventurecraft:oak_timber",
+  "lootMultiplier": 1.0,
   "toReplace": "minecraft:oak_log"
 }

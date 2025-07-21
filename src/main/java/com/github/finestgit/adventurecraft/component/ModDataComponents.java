@@ -26,6 +26,13 @@ public class ModDataComponents {
                     .networkSynchronized(CustomDurabilityComponent.STREAM_CODEC)
     );
 
+    public static final DeferredHolder<DataComponentType<?>, DataComponentType<ToolStatsComponent>> TOOL_STATS_COMPONENT = register(
+            "tool_stats_component",
+            builder -> builder
+                    .persistent(ToolStatsComponent.CODEC)
+                    .networkSynchronized(ToolStatsComponent.STREAM_CODEC)
+    );
+
     private static <T> DeferredHolder<DataComponentType<?>, DataComponentType<T>> register(
             String name,
             UnaryOperator<DataComponentType.Builder<T>> builderOperator) {
@@ -48,6 +55,23 @@ public class ModDataComponents {
                 ByteBufCodecs.INT, CustomDurabilityComponent::currentDurability,
                 ByteBufCodecs.INT, CustomDurabilityComponent::maxDurability,
                 CustomDurabilityComponent::new
+        );
+    }
+
+    public record ToolStatsComponent(int speed, double multi, double wisdom) {
+        public static final Codec<ToolStatsComponent> CODEC = RecordCodecBuilder.create(
+                instance -> instance.group(
+                        Codec.INT.fieldOf("speed").forGetter(ToolStatsComponent::speed),
+                        Codec.DOUBLE.fieldOf("multi").forGetter(ToolStatsComponent::multi),
+                        Codec.DOUBLE.fieldOf("wisdom").forGetter(ToolStatsComponent::wisdom)
+                ).apply(instance, ToolStatsComponent::new)
+        );
+
+        public static final StreamCodec<ByteBuf, ToolStatsComponent> STREAM_CODEC = StreamCodec.composite(
+                ByteBufCodecs.INT, ToolStatsComponent::speed,
+                ByteBufCodecs.DOUBLE, ToolStatsComponent::multi,
+                ByteBufCodecs.DOUBLE, ToolStatsComponent::wisdom,
+                ToolStatsComponent::new
         );
     }
 }

@@ -1,4 +1,6 @@
-// 1.21	2025-07-17T19:31:44.6261468	Recipes
+// 1.21	2025-07-18T07:04:14.1311105	Recipes
+8f18f5679bcebff66be75f22c5dff69320a4c622 data/adventurecraft/advancement/recipes/building_blocks/oak_planks.json
+0ae2b9897141f16d2ace45837f6de394ca55dbba data/adventurecraft/advancement/recipes/misc/stick.json
 26ed1fdc248990b8b0e71d50c36b5828d7d08706 data/adventurecraft/advancement/recipes/tools/flexible_wood_woodcutting_axe_pattern_1.json
 ba6b2d7cc5cac23a6d1a3ea5cc32a71dabadfa33 data/adventurecraft/advancement/recipes/tools/flexible_wood_woodcutting_axe_pattern_2.json
 1d18da868dd8347e9d9a6df504b8df9edc828f44 data/adventurecraft/advancement/recipes/tools/flexible_wood_woodcutting_axe_pattern_3.json
@@ -7,5 +9,5 @@ ba6b2d7cc5cac23a6d1a3ea5cc32a71dabadfa33 data/adventurecraft/advancement/recipes
 2fe21b17828db01084372628ffe4e4c5a98b60fc data/adventurecraft/recipe/flexible_wood_woodcutting_axe_pattern_2.json
 75cf5648f1b842ab9bf308de72d127716f5ddbb1 data/adventurecraft/recipe/flexible_wood_woodcutting_axe_pattern_3.json
 ef5d53ee159cc4717069aaa2778bda50aeb47b48 data/adventurecraft/recipe/flexible_wood_woodcutting_axe_pattern_4.json
-492642481f349a6aebe0e47f4fe3b28386044bd8 data/minecraft/advancement/recipes/misc/stick.json
-7a173bec3af4c22a9c45a5add6b38b3983b333dc data/minecraft/recipe/stick.json
+a2643e8a65bfb7b784b25c4cf3aa420f903c5472 data/adventurecraft/recipe/oak_planks.json
+14aa6a3c328361f1fb60ed1611eaf1f90cdbc50a data/adventurecraft/recipe/stick.json

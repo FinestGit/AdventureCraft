@@ -8,6 +8,7 @@ import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -17,50 +18,55 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     }
 
     @Override
-    protected void buildRecipes(RecipeOutput recipeOutput) {
+    protected void buildRecipes(@NotNull RecipeOutput recipeOutput) {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.STICK, 4)
+                .requires(ModItems.OAK_TIMBER, 2)
+                .unlockedBy("has_oak_timber", has(ModItems.OAK_TIMBER))
+                .save(recipeOutput, AdventureCraftMod.MODID + ":" + getItemName(Items.STICK));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, Items.OAK_PLANKS, 1)
                 .requires(ModItems.OAK_TIMBER)
                 .unlockedBy("has_oak_timber", has(ModItems.OAK_TIMBER))
-                .save(recipeOutput);
+                .save(recipeOutput, AdventureCraftMod.MODID + ":" + getItemName(Items.OAK_PLANKS));
 
-        createFlexibleAxeRecipe(recipeOutput, ModItems.WOOD_WOODCUTTING_AXE.get(), ModItems.OAK_TIMBER, Items.STICK);
+        createFlexibleAxeRecipe(recipeOutput, ModItems.WOOD_WOODCUTTING_AXE.get());
     }
 
-    protected void createFlexibleAxeRecipe(RecipeOutput recipeOutput, ItemLike result, ItemLike block, ItemLike stick) {
+    protected void createFlexibleAxeRecipe(RecipeOutput recipeOutput, ItemLike result) {
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, result)
                 .pattern(" BB")
                 .pattern(" SB")
                 .pattern("S  ")
-                .define('B', block)
-                .define('S', stick)
-                .unlockedBy(getHasName(block), has(block))
+                .define('B', ModItems.OAK_TIMBER)
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.OAK_TIMBER), has(ModItems.OAK_TIMBER))
                 .save(recipeOutput, AdventureCraftMod.MODID + ":" + "flexible_" + getItemName(result) + "_pattern_1");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, result)
                 .pattern(" BB")
                 .pattern(" SB")
                 .pattern(" S ")
-                .define('B', block)
-                .define('S', stick)
-                .unlockedBy(getHasName(block), has(block))
+                .define('B', ModItems.OAK_TIMBER)
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.OAK_TIMBER), has(ModItems.OAK_TIMBER))
                 .save(recipeOutput, AdventureCraftMod.MODID + ":" + "flexible_" + getItemName(result) + "_pattern_2");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, result)
                 .pattern("BB ")
                 .pattern("BS ")
                 .pattern(" S ")
-                .define('B', block)
-                .define('S', stick)
-                .unlockedBy(getHasName(block), has(block))
+                .define('B', ModItems.OAK_TIMBER)
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.OAK_TIMBER), has(ModItems.OAK_TIMBER))
                 .save(recipeOutput, AdventureCraftMod.MODID + ":" + "flexible_" + getItemName(result) + "_pattern_3");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, result)
                 .pattern("BB ")
                 .pattern("BS ")
                 .pattern("  S")
-                .define('B', block)
-                .define('S', stick)
-                .unlockedBy(getHasName(block), has(block))
+                .define('B', ModItems.OAK_TIMBER)
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.OAK_TIMBER), has(ModItems.OAK_TIMBER))
                 .save(recipeOutput, AdventureCraftMod.MODID + ":" + "flexible_" + getItemName(result) + "_pattern_4");
     }
 }

@@ -23,6 +23,6 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
         this.add("oak_timber_to_oak_log",
                 new LootReplacementModifier(new LootItemCondition[]{
                         LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.OAK_LOG).build(),
-                }, ModItems.OAK_TIMBER.get(), Items.OAK_LOG));
+                }, ModItems.OAK_TIMBER.get(), Items.OAK_LOG, 1.0));
     }
 }

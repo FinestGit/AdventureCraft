@@ -27,7 +27,7 @@ public class ModCreativeModeTabs {
     public static final Supplier<CreativeModeTab> ADVENTURE_CRAFT_TOOLS_TAB = CREATIVE_MODE_TAB.register("adventurecraft_tools_tab",
             () -> CreativeModeTab.builder()
                     .icon(() -> new ItemStack(ModItems.WOOD_WOODCUTTING_AXE.get()))
-                    .title(Component.translatable("creativetab.adventurecraftt.adventurecraft_tools"))
+                    .title(Component.translatable("creativetab.adventurecraft.adventurecraft_tools"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.WOOD_WOODCUTTING_AXE);
                     })
