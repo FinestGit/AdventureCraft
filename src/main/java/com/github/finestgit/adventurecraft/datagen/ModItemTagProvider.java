@@ -1,6 +1,7 @@
 package com.github.finestgit.adventurecraft.datagen;
 
 import com.github.finestgit.adventurecraft.AdventureCraftMod;
+import com.github.finestgit.adventurecraft.utils.WoodcuttingTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;

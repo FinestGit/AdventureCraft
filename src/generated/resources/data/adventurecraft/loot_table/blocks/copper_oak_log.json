@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "adventurecraft:copper_oak_timber"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "adventurecraft:blocks/copper_oak_log"
+}

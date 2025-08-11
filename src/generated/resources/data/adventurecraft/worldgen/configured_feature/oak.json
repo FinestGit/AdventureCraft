@@ -1,0 +1,37 @@
+{
+  "type": "adventurecraft:mod_tree",
+  "config": {
+    "foliage_placer": {
+      "max_foliage_radius": 3,
+      "min_foliage_radius": 2
+    },
+    "foliage_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "adventurecraft:oak_leaves",
+        "Properties": {
+          "distance": "7",
+          "persistent": "false",
+          "waterlogged": "false"
+        }
+      }
+    },
+    "root_placer": {
+      "max_root_depth": 12,
+      "min_root_depth": 7
+    },
+    "trunk_placer": {
+      "max_trunk_height": 12,
+      "min_trunk_height": 7
+    },
+    "trunk_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "adventurecraft:oak_log",
+        "Properties": {
+          "axis": "y"
+        }
+      }
+    }
+  }
+}

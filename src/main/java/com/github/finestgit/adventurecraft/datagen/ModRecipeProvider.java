@@ -24,11 +24,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_oak_timber", has(ModItems.OAK_TIMBER))
                 .save(recipeOutput, AdventureCraftMod.MODID + ":" + getItemName(Items.STICK));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, Items.OAK_PLANKS, 1)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.OAK_PLANKS, 1)
                 .requires(ModItems.OAK_TIMBER)
                 .unlockedBy("has_oak_timber", has(ModItems.OAK_TIMBER))
                 .save(recipeOutput, AdventureCraftMod.MODID + ":" + getItemName(Items.OAK_PLANKS));
-
         createFlexibleAxeRecipe(recipeOutput, ModItems.WOOD_WOODCUTTING_AXE.get());
     }
 

@@ -1,11 +1,12 @@
 package com.github.finestgit.adventurecraft;
 
 import com.github.finestgit.adventurecraft.attachment.PlayerAttachement;
+import com.github.finestgit.adventurecraft.block.ModBlocks;
 import com.github.finestgit.adventurecraft.component.ModDataComponents;
 import com.github.finestgit.adventurecraft.item.ModItems;
+import com.github.finestgit.adventurecraft.levelgen.feature.ModFeatures;
 import com.github.finestgit.adventurecraft.loot.ModLootModifiers;
 import com.github.finestgit.adventurecraft.tab.ModCreativeModeTabs;
-import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -42,11 +43,15 @@ public class AdventureCraftMod {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        ModFeatures.FEATURES.register(modEventBus);
+
         PlayerAttachement.register(modEventBus);
 
         ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+
+        ModBlocks.register(modEventBus);
 
         ModDataComponents.register(modEventBus);
 
@@ -76,6 +81,7 @@ public class AdventureCraftMod {
     static class ClientModEvents {
         @SubscribeEvent
         static void onClientSetup(FMLClientSetupEvent event) {
+
         }
     }
 }

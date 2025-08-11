@@ -1,6 +1,8 @@
 package com.github.finestgit.adventurecraft.item.woodcutting;
 
+import com.github.finestgit.adventurecraft.component.CustomDurabilityComponent;
 import com.github.finestgit.adventurecraft.component.ModDataComponents;
+import com.github.finestgit.adventurecraft.component.ToolStatsComponent;
 import com.github.finestgit.adventurecraft.utils.ModCustomTiers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -33,7 +35,7 @@ public class WoodcuttingAxeItem extends Item {
             int speed = getRandomSpeedValue(rand);
             double multi = getRandomMultiValue(rand);
             double wisdom = getRandomWisdomValue(rand);
-            stack.set(ModDataComponents.TOOL_STATS_COMPONENT, new ModDataComponents.ToolStatsComponent(speed, multi, wisdom));
+            stack.set(ModDataComponents.TOOL_STATS_COMPONENT, new ToolStatsComponent(speed, multi, wisdom));
         }
     }
 
@@ -42,7 +44,7 @@ public class WoodcuttingAxeItem extends Item {
         int minimumPossibleDurability = this.itemTier.getMinDurability();
 
         int durability = randomizer.nextInt((maximumPossibleDurability - minimumPossibleDurability) + 1) + minimumPossibleDurability;
-        stack.set(ModDataComponents.DURABILITY_COMPONENT, new ModDataComponents.CustomDurabilityComponent(durability, durability));
+        stack.set(ModDataComponents.DURABILITY_COMPONENT, new CustomDurabilityComponent(durability, durability));
     }
 
     private int getRandomSpeedValue(Random randomizer) {
@@ -93,11 +95,11 @@ public class WoodcuttingAxeItem extends Item {
 
     private void damageDurability(ItemStack stack, int damageDealt) {
         if (stack.has(ModDataComponents.DURABILITY_COMPONENT)) {
-            int maxDurability = stack.getOrDefault(ModDataComponents.DURABILITY_COMPONENT, new ModDataComponents.CustomDurabilityComponent(0, 0)).maxDurability();
-            int durability = stack.getOrDefault(ModDataComponents.DURABILITY_COMPONENT, new ModDataComponents.CustomDurabilityComponent(0, 0)).currentDurability();
+            int maxDurability = stack.getOrDefault(ModDataComponents.DURABILITY_COMPONENT, new CustomDurabilityComponent(0, 0)).maxDurability();
+            int durability = stack.getOrDefault(ModDataComponents.DURABILITY_COMPONENT, new CustomDurabilityComponent(0, 0)).currentDurability();
             if (durability > 0) {
                 int newDurability = durability - damageDealt;
-                stack.set(ModDataComponents.DURABILITY_COMPONENT, new ModDataComponents.CustomDurabilityComponent(newDurability, maxDurability));
+                stack.set(ModDataComponents.DURABILITY_COMPONENT, new CustomDurabilityComponent(newDurability, maxDurability));
             }
         }
     }
@@ -107,23 +109,23 @@ public class WoodcuttingAxeItem extends Item {
     }
 
     public int getCurrentDurability(ItemStack stack) {
-        return stack.getOrDefault(ModDataComponents.DURABILITY_COMPONENT, new ModDataComponents.CustomDurabilityComponent(0, 0)).currentDurability();
+        return stack.getOrDefault(ModDataComponents.DURABILITY_COMPONENT, new CustomDurabilityComponent(0, 0)).currentDurability();
     }
 
     public int getMaximumDurability(ItemStack stack) {
-        return stack.getOrDefault(ModDataComponents.DURABILITY_COMPONENT, new ModDataComponents.CustomDurabilityComponent(0, 0)).maxDurability();
+        return stack.getOrDefault(ModDataComponents.DURABILITY_COMPONENT, new CustomDurabilityComponent(0, 0)).maxDurability();
     }
 
     public int getSpeed(ItemStack stack) {
-        return stack.getOrDefault(ModDataComponents.TOOL_STATS_COMPONENT, new ModDataComponents.ToolStatsComponent(0, 0, 0)).speed();
+        return stack.getOrDefault(ModDataComponents.TOOL_STATS_COMPONENT, new ToolStatsComponent(0, 0, 0)).speed();
     }
 
     public double getMulti(ItemStack stack) {
-        return stack.getOrDefault(ModDataComponents.TOOL_STATS_COMPONENT, new ModDataComponents.ToolStatsComponent(0, 0, 0)).multi();
+        return stack.getOrDefault(ModDataComponents.TOOL_STATS_COMPONENT, new ToolStatsComponent(0, 0, 0)).multi();
     }
 
     public double getWisdom(ItemStack stack) {
-        return stack.getOrDefault(ModDataComponents.TOOL_STATS_COMPONENT, new ModDataComponents.ToolStatsComponent(0, 0, 0)).wisdom();
+        return stack.getOrDefault(ModDataComponents.TOOL_STATS_COMPONENT, new ToolStatsComponent(0, 0, 0)).wisdom();
     }
 
     @Override

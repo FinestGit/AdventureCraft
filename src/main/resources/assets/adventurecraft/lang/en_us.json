@@ -1,6 +1,18 @@
 {
   "item.adventurecraft.oak_timber": "Oak Timber",
+  "item.adventurecraft.oak_wood_fiber": "Oak Wood Fiber",
+  "item.adventurecraft.oak_woodcutting_axe": "Oak Woodcutting Axe",
+  "item.adventurecraft.copper_oak_timber": "Copper Oak Timber",
+  "item.adventurecraft.copper_oak_woodcutting_axe": "Copper Oak Woodcutting Axe",
   "item.adventurecraft.wood_woodcutting_axe": "Wood Woodcutting Axe",
+  "block.adventurecraft.oak_log": "Oak Log",
+  "block.adventurecraft.oak_sapling": "Oak Sapling",
+  "block.adventurecraft.oak_leaves": "Oak Leaves",
+  "block.adventurecraft.copper_oak_log": "Copper Log",
+  "block.adventurecraft.copper_oak_leaves": "Copper Oak Leaves",
+  "block.adventurecraft.copper_oak_sapling": "Copper Oak Sapling",
   "creativetab.adventurecraft.adventurecraft_items": "AdventureCraft Items",
-  "creativetab.adventurecraft.adventurecraft_tools": "AdventureCraft Tools"
+  "creativetab.adventurecraft.adventurecraft_tools": "AdventureCraft Tools",
+  "creativetab.adventurecraft.adventurecraft_blocks": "AdventureCraft Blocks",
+  "creativetab.adventurecraft.adventurecraft_usable_blocks": "AdventureCrat Usable Blocks"
 }

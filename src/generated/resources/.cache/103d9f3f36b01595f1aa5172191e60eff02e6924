@@ -1,2 +1,9 @@
-// 1.21	2025-07-21T05:01:44.3044435	Registries
+// 1.21	2025-08-11T16:06:27.6546925	Registries
 22365ec914d66c8571e0b9ba0a49e08364f66d43 data/adventurecraft/neoforge/biome_modifier/remove_all_trees.json
+85089c0906c1915178af58af5bfdb9826a21486e data/adventurecraft/worldgen/biome/test_surface_biome.json
+edfacdf16a581ff0207a8fb7c383aa3933b2d669 data/adventurecraft/worldgen/configured_feature/copper_oak.json
+0560473f1939f725e33935eb12f47fa0045ed4e0 data/adventurecraft/worldgen/configured_feature/mature_copper_oak.json
+58822c589c4f2b2dddb3f62d3e47f719d13ea805 data/adventurecraft/worldgen/configured_feature/oak.json
+ee236445550ba297acd44cf8744e302f4b9cf5ca data/adventurecraft/worldgen/configured_feature/oak_small_forest.json
+ca412fbc5bfe70334b15e48ddb1e0fd92b77877d data/adventurecraft/worldgen/placed_feature/oak_small_forest.json
+c15335f0cbbbfa3ac4f9f62cac5c834213b795f3 data/minecraft/dimension/overworld.json

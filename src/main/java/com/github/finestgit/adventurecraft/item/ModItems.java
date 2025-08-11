@@ -12,6 +12,8 @@ public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(AdventureCraftMod.MODID);
 
     public static final DeferredItem<Item> OAK_TIMBER = ITEMS.register("oak_timber", () -> new Item(new Item.Properties().stacksTo(64)));
+    public static final DeferredItem<Item> OAK_WOOD_FIBER = ITEMS.register("oak_wood_fiber", () -> new Item(new Item.Properties().stacksTo(64)));
+    public static final DeferredItem<Item> COPPER_OAK_TIMBER = ITEMS.register("copper_oak_timber", () -> new Item(new Item.Properties().stacksTo(64)));
 
     public static final DeferredItem<Item> WOOD_WOODCUTTING_AXE = ITEMS.register("wood_woodcutting_axe",
             () -> new WoodcuttingAxeItem(ModCustomTiers.WOOD_TIER, new Item.Properties()));
